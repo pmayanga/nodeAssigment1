@@ -19,7 +19,7 @@ const convertCSVtoJSON = (filename = './customer-data.csv')=>{
 
 	getJson (filename,(error,data)=>{
 		if (error) return console.error(error)
-		fs.writeFileSync(path.join(__dirname,'' ,outputFileName),JSON.stringify(data))
+		fs.writeFileSync(path.join(__dirname,'' ,outputFileName),JSON.stringify(data,null,2))
 		console.log('Convertion ended succesfully. Check for the file '+outputFileName)
 	})
 
